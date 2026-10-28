@@ -1,0 +1,28 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "Start IMovies Full Stack",
+      "type": "shell",
+      "command": "npm run dev",
+      "isBackground": true,
+      "problemMatcher": [],
+      "group": {
+        "kind": "build",
+        "isDefault": true
+      }
+    },
+    {
+      "label": "Install Dependencies",
+      "type": "shell",
+      "command": "npm run install:all",
+      "problemMatcher": []
+    },
+    {
+      "label": "Seed Sample Database",
+      "type": "shell",
+      "command": "npm run seed",
+      "problemMatcher": []
+    }
+  ]
+}

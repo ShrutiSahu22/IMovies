@@ -1,0 +1,25 @@
+services:
+  - type: web
+    name: imovies-cinema
+    runtime: node
+    plan: free
+    region: oregon
+    buildCommand: npm run render:build
+    startCommand: npm run render:start
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: PORT
+        value: 10000
+      - key: CLIENT_URL
+        value: https://imovies-cinema.onrender.com
+      - key: MONGO_URI
+        sync: false
+      - key: JWT_SECRET
+        generateValue: true
+      - key: ADMIN_NAME
+        value: Cinema Admin
+      - key: ADMIN_EMAIL
+        value: admin@imovies.dev
+      - key: ADMIN_PASSWORD
+        value: Admin@1234
